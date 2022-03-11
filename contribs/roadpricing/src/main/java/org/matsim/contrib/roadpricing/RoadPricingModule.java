@@ -56,6 +56,6 @@ public final class RoadPricingModule extends AbstractModule {
 
 		// this is what makes the mobsim compute tolls and generate money events
 		addControlerListenerBinding().to(RoadPricingControlerListener.class);
-		
+		bind(RoadPricingTollCalculator.class).in(Singleton.class);
 	}
 }

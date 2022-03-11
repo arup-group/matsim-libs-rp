@@ -64,10 +64,13 @@ class RoadPricingControlerListener implements StartupListener, IterationEndsList
 	private final OutputDirectoryHierarchy controlerIO;
 
 	@Inject
-	RoadPricingControlerListener( RoadPricingScheme scheme, Network network,
-				      EventsManager events, OutputDirectoryHierarchy controlerIO ) {
+	RoadPricingControlerListener( RoadPricingScheme scheme,
+								  Network network,
+								  EventsManager events,
+								  RoadPricingTollCalculator roadPricingTollCalculator,
+								  OutputDirectoryHierarchy controlerIO ) {
 		this.scheme = scheme;
-		this.calcPaidToll = new RoadPricingTollCalculator( network, scheme, events );
+		this.calcPaidToll = roadPricingTollCalculator;
 		this.cattl = new CalcAverageTolledTripLength( network, scheme, events );
 		this.controlerIO = controlerIO;
 		Gbl.printBuildInfo("RoadPricing", "/org.matsim.contrib/roadpricing/revision.txt");
