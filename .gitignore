@@ -12,3 +12,8 @@ matsimExamples
 
 # ignore output directories:
 output/
+
+contribs/noise/nullaverage_damages_link/
+contribs/noise/nullaverage_damages_link_car/
+contribs/noise/nullaverage_damages_link_hgv/
+contribs/noise/nulldamages_receiverPoint/
