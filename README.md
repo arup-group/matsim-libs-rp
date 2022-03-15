@@ -1,3 +1,14 @@
+# Arup CML's Fork of MATSim
+
+This is a local fork of the MATSim code base. We intend to make as few local changes to MATSim as we possibly can, but
+every once in a while there will be something that we want or need to change that is not appropriate to push to
+"MATSim central". These Arup-specific changes are handled here.
+
+Initially we created this fork in order to make some changes to the road pricing extension, as described in the
+[README of that subproject](contribs/roadpricing/README.md). We should use that as a template for making future
+changes to specific modules, for example if we want to do something with the EV or emissions modules.
+---
+
 ## Overview
 
 MATSim provides a toolbox to run and implement large-scale agent-based

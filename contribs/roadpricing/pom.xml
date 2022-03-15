@@ -5,9 +5,9 @@
 		<version>14.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.matsim.contrib</groupId>
-	<artifactId>roadpricing</artifactId>
-	<name>roadpricing</name>
+	<groupId>com.arup.cml</groupId>
+	<artifactId>arup-roadpricing</artifactId>
+	<name>arup-roadpricing</name>
 	<build>
 		<resources>
 			<resource>

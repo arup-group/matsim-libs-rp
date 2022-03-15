@@ -78,6 +78,7 @@ public final class RoadPricingTollCalculator implements LinkEnterEventHandler, V
 	private final TollBehaviourI handler;
 	private final Vehicle2DriverEventHandler delegate = new Vehicle2DriverEventHandler();
 
+	@Inject
 	RoadPricingTollCalculator(final Network network, final RoadPricingScheme scheme, EventsManager events ) {
 		super();
 		events.addHandler(this);
@@ -151,20 +152,20 @@ public final class RoadPricingTollCalculator implements LinkEnterEventHandler, V
 	}
 
 
-//	/**
-//	 * Returns the toll the specified agent has paid in the course of the
-//	 * simulation so far.
-//	 *
-//	 * @param agentId
-//	 * @return The toll paid by the specified agent, 0.0 if no toll was paid.
-//	 */
-//	double getAgentToll(final Id<Person> agentId) {
-//		AgentTollInfo info = this.agents.get(agentId);
-//		if (info == null) {
-//			return 0.0;
-//		}
-//		return info.toll;
-//	}
+	/**
+	 * Returns the toll the specified agent has paid in the course of the
+	 * simulation so far.
+	 *
+	 * @param agentId
+	 * @return The toll paid by the specified agent, 0.0 if no toll was paid.
+	 */
+	public double getAgentToll(final Id<Person> agentId) {
+		AgentTollInfo info = this.agents.get(agentId);
+		if (info == null) {
+			return 0.0;
+		}
+		return info.toll;
+	}
 
 	/**
 	 * @return The toll paid by all the agents.
