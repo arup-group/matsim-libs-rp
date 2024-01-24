@@ -1,6 +1,10 @@
 # Arup CML's Fork of MATSim
 
-This is a local fork of the MATSim code base. We intend to make as few local changes to MATSim as we possibly can, but
+This is a local fork of the MATSim code base, featuring some road pricing specific features. 
+
+In Jan'24 we renamed this as matsim-libs-rp, indicating it is specific to road pricing and to enable for a clean matsim-libs clone (since this one if very out of date and it doesn't make sense to merge/bring it up to speed). It is therefore left for any road pricing use cases
+
+We intend to make as few local changes to MATSim as we possibly can, but
 every once in a while there will be something that we want or need to change that is not appropriate to push to
 "MATSim central". These Arup-specific changes are handled here.
 
